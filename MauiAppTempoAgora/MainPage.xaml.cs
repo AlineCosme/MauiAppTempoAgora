@@ -40,16 +40,18 @@ namespace MauiAppTempoAgora
                     }else
 
                     {
-                        lbl_res.Text = "Sem dados de Previsão";
+                        lbl_res.Text = "Sem dados de previsão, nome da cidade não encontrado!";
                     }
                 } else
                 {
                     lbl_res.Text = "Preencha a cidade.";
                 }
 
+
+
             }catch(Exception ex)
             {
-                await DisplayAlert("Ops", ex.Message, "OK");
+                await DisplayAlert("Ops sem conexão com a internet", ex.Message, "OK");
             }
 
         }
